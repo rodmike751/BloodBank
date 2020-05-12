@@ -1,0 +1,31 @@
+
+<div class="row">
+  <div class="col">
+      <button class="btn btn-danger float-right" (click)="openForm()">New Regions</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+  <table class="table table-bordered" mt-2>
+      <thead class="thead-light">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>No. of Banks</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of regions; let i = index">
+              <td>{{i + 1}}.</td>
+              <td>{{r.Name}}</td>
+              <td>{{r.Banks}}</td>
+              <td>
+                  <button (click)="editForm(r.Id)">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+  </table>
+</div>
+</div>
